@@ -1,0 +1,23 @@
+<metadata>
+<dc:identifier id="unique-identifier">osdc002</dc:identifier>
+<dc:title>Tips and Tricks for C Programming</dc:title>
+<dc:creator>Jim Hall</dc:creator>
+<dc:language>English</dc:language>
+<meta property="dcterms:modified">2022-06-23T12:09:13Z</meta>
+<meta content="LibreOffice/7.3.0.3$Linux_X86_64 LibreOffice_project/0f246aa12d0eee4a0f7adcefbf7c878fc2238db3 (libepubgen/0.1.1)" name="generator"/>
+</metadata>
+<manifest>
+...
+<item href="https://opensource.com/sections/section0001.xhtml" id="section0001" media-type="application/xhtml+xml"/>
+<item href="https://opensource.com/images/image0003.png" id="image0003" media-type="image/png"/>
+<item href="https://opensource.com/styles/stylesheet.css" id="stylesheet.css" media-type="text/css"/>
+<item href="https://opensource.com/toc.ncx" id="toc.ncx" media-type="application/x-dtbncx+xml"/>
+...
+</manifest>
+<spine toc="toc.ncx">
+<itemref idref="section0001"/>
+<itemref idref="section0002"/>
+<itemref idref="section0003"/>
+...
+</spine>
+</package>
