@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<package version="3.0" unique-identifier="BookId" xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata>
+    <dc:identifier id="BookId">6a2d2347-157b-3e0d-897b-fadf40063834</dc:identifier>
+    <dc:title>God-Like Extraction</dc:title>
+    <dc:creator>Fruit of Chaos</dc:creator>
+    <dc:language>en</dc:language>
+    <dc:language>eng</dc:language>
+    <meta property="dcterms:modified">2023-03-11T01:26:39Z</meta>
+    <meta name="padding" content="ZPN/pJ1kMLC2wk6bKfq8HGPi+XphjdGhpJUptfhJQvM="/>
+    <dc:description>“Discovered the corpse of an ordinary human, loot to receive Super-strength Pill, extract?”
+“Yes!”
+“Discovered hundred years aged Original Plane corpse, loot to receive Indestructible Golden Body, extract?”
+“Yes!”
+“Discovered the Demonic Body of the Hellbound Domination Emperor, loot to receive Sun-swallowing Cerberus, extract?”
+“Yes!”
+…
+Su Jinghang said, “You may not believe me, but this invincible power of mine all came from physical labor.”</dc:description>
+    <meta name="cover" content="cover"/>
+  </metadata>
+  
+  <manifest>
+    <item href="images/cover.jpeg" id="cover-img"  media-type="image/jpeg" properties="cover-image"/>
+    <item href="cover.xhtml" id="cover" media-type="application/xhtml+xml" properties="svg"/>
+    <item href="nav.xhtml" id="toc"  media-type="application/xhtml+xml" properties="nav scripted"/>
+    <item href="intro.xhtml" id="intro" media-type="application/xhtml+xml"/>
+    <item href="toc.ncx" id="ncx"  media-type="application/x-dtbncx+xml"/>
+    
+    <item href="pages/chapter_1.xhtml" id="idx_1" media-type="application/xhtml+xml"/>
+    <item href="pages/chapter_2.xhtml" id="idx_2" media-type="application/xhtml+xml"/>
+    <item href="pages/chapter_3.xhtml" id="idx_3" media-type="application/xhtml+xml"/>
+    <item href="pages/chapter_4.xhtml" id="idx_4" media-type="application/xhtml+xml"/>
+    <item href="pages/chapter_5.xhtml" id="idx_5" media-type="application/xhtml+xml"/>
+  </manifest>
+
+  <!-- toc.ncx -->
+  <spine toc="ncx"> 
+		<itemref idref="cover"/>
+		<itemref idref="intro"/>
+    <itemref idref="toc"/>
+    <itemref idref="idx_1"/>
+    <itemref idref="idx_2"/>
+    <itemref idref="idx_3"/>
+    <itemref idref="idx_4"/>
+    <itemref idref="idx_5"/>
+	</spine>
+</package>

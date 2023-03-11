@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="eng">
+  <head>
+  <!-- The following four metadata items are required for all NCX documents,
+including those that conform to the relaxed constraints of OPS 2.0 -->
+    <meta name="dtb:uid" content="6a2d2347-157b-3e0d-897b-fadf40063834"/> <!-- same as in .opf -->
+    <meta name="dtb:depth" content="2"/> <!-- 1 or higher -->
+    <meta name="dtb:totalPageCount" content="0"/> <!-- must be 0 -->
+    <meta name="dtb:maxPageNumber" content="0"/> <!-- must be 0 -->
+  </head>
+
+  <docTitle>
+    <text>God-Like Extraction</text>
+  </docTitle>
+  <!-- <docAuthor>
+    <text>Austen, Jane</text>
+  </docAuthor> -->
+  <navMap>
+    <navInfo>
+      <text>THE CONTENTS</text>
+    </navInfo>
+    
+    <navPoint>
+      <navLabel>
+        <text>COVER</text>
+      </navLabel>
+      <content src="cover.xhtml"/>
+    </navPoint>
+
+    <navPoint>
+      <navLabel>
+        <text>INTRODUCTION</text>
+      </navLabel>
+      <content src="intro.xhtml"/>
+    </navPoint>
+    <navPoint>
+      <navLabel>
+        <text>THE TABLE OF CONTENTS</text>
+      </navLabel>
+      <content src="nav.xhtml"/>
+    </navPoint>
+  
+    <navPoint>
+      <navLabel>
+        <text>Chapter 1: Suo Jingxing</text>
+      </navLabel>
+      <content src="pages/chapter_1.xhtml"/>
+    </navPoint>
+
+    <navPoint>
+      <navLabel>
+        <text>Chapter 2: He Would Love to Help</text>
+      </navLabel>
+      <content src="pages/chapter_2.xhtml"/>
+    </navPoint>
+    
+    <navPoint>
+      <navLabel>
+        <text>Chapter 3: A New Card</text>
+      </navLabel>
+      <content src="pages/chapter_3.xhtml"/>
+    </navPoint>
+    
+    <navPoint>
+      <navLabel>
+        <text>Chapter 4: Within Seven Steps, All Enemies Shall Drop Dead!</text>
+      </navLabel>
+      <content src="pages/chapter_4.xhtml"/>
+    </navPoint>
+    
+    <navPoint>
+      <navLabel>
+        <text>Chapter 5: Forestry Town</text>
+      </navLabel>
+      <content src="pages/chapter_5.xhtml"/>
+    </navPoint>
+  </navMap>
+</ncx>
