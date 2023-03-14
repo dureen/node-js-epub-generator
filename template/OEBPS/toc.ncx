@@ -39,26 +39,6 @@ including those that conform to the relaxed constraints of OPS 2.0 -->
       </navLabel>
       <content src="nav.xhtml"/>
     </navPoint>
-
-<navPoint>
-    <navLabel>
-        <text>Title 1</text>
-    </navLabel>
-    <content src="pages/pg-1.xhtml"/>
-</navPoint>
-
-<navPoint>
-    <navLabel>
-        <text>Title 2</text>
-    </navLabel>
-    <content src="pages/pg-2.xhtml"/>
-</navPoint>
-
-<navPoint>
-    <navLabel>
-        <text>Title 3</text>
-    </navLabel>
-    <content src="pages/pg-3.xhtml"/>
-</navPoint>
+{{ navPoint }}
   </navMap>
 </ncx>

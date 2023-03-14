@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <package version="3.0" unique-identifier="BookId" xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <metadata>
-    <dc:identifier id="BookId">book-ku</dc:identifier>
-    <dc:title>The book title</dc:title>
-    <dc:creator>the book author</dc:creator>
-    <dc:language>en</dc:language>
-    <meta property="dcterms:modified">YYYY-MM-DD</meta>
+    <dc:identifier id="BookId">{{ identifier }}</dc:identifier>
+    <dc:title>{{ title }}</dc:title>
+    <dc:creator>{{ creator }}</dc:creator>
+    <dc:language>{{ language }}</dc:language>
+    <meta property="dcterms:modified">{{ modified }}</meta>
     <meta name="padding" content="ZPN/pJ1kMLC2wk6bKfq8HGPi+XphjdGhpJUptfhJQvM="/>
-    <dc:description>This is a description</dc:description>
+    <dc:description>{{ description }}</dc:description>
     <meta name="cover" content="cover"/>
   </metadata>
   
@@ -17,9 +17,7 @@
     <item href="nav.xhtml" id="toc"  media-type="application/xhtml+xml" properties="nav scripted"/>
     <item href="intro.xhtml" id="intro" media-type="application/xhtml+xml"/>
     <item href="toc.ncx" id="ncx"  media-type="application/x-dtbncx+xml"/>
-    <item href="pages/pg-1.xhtml" id="idx-1" media-type="application/xhtml+xml"/>
-    <item href="pages/pg-2.xhtml" id="idx-2" media-type="application/xhtml+xml"/>
-    <item href="pages/pg-3.xhtml" id="idx-3" media-type="application/xhtml+xml"/>
+{{ items }}
   </manifest>
 
   <!-- toc.ncx -->
@@ -27,8 +25,6 @@
     <itemref idref="cover"/>
     <itemref idref="intro"/>
     <itemref idref="toc"/>
-    <itemref idref="idx-1"/>
-    <itemref idref="idx-2"/>
-    <itemref idref="idx-3"/>
+{{ itemrefs }}
   </spine>
 </package>

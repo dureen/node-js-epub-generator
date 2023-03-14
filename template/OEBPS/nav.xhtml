@@ -3,14 +3,22 @@
     <head>
     <title>Table of Contents</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <style type="text/css" title="override_css">
+        @page {padding: 0pt; margin:0pt}
+        body { padding:0pt; margin: 0pt; }
+        .text-center{
+            text-align: center;
+            align-items: center;
+        }
+    </style>
 </head>
     <body>
+        <br/>
+        <h2 class="text-center">Table of contents</h2>
         <nav epub:type="toc" id="toc">
-            <ol>
-<li><a href="pages/pg-1.xhtml">Title 1</a></li>
-<li><a href="pages/pg-2.xhtml">Title 2</a></li>
-<li><a href="pages/pg-3.xhtml">Title 3</a></li>
-            </ol>
+            <ul>
+{{ navList }}
+            </ul>
         </nav>
         <script type="text/javascript">
             // code

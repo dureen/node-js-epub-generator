@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/dureen/node-examples#readme",
   "dependencies": {
-    "adm-zip": "^0.5.10"
+    "adm-zip": "^0.5.10",
+    "jsdom": "^21.1.1"
   }
 }
