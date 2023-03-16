@@ -1,1 +1,1 @@
-# node-examples
+# node-js-epub-generator
