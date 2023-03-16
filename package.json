@@ -18,7 +18,15 @@
   },
   "homepage": "https://github.com/dureen/node-examples#readme",
   "dependencies": {
+    "@napi-rs/canvas": "^0.1.39",
     "adm-zip": "^0.5.10",
-    "jsdom": "^21.1.1"
+    "jsdom": "^21.1.1",
+    "moment": "^2.29.4",
+    "sequelize": "^6.29.3",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "eslint": "^8.36.0",
+    "eslint-config-google": "^0.14.0"
   }
 }
