@@ -1,44 +1,25 @@
 /* eslint-disable max-len */
 const fs = require('node:fs');
 const AdmZip = require('adm-zip');
-const moment = require('moment');
 
-// const data = [
-//   {
-//     id: '1',
-//     position: '1',
-//     subtitle: 'Title 1',
-//     content: 'Content 1',
-//   },
-//   {
-//     id: '2',
-//     position: '2',
-//     subtitle: 'Title 2',
-//     content: 'Content 2',
-//   },
-//   {
-//     id: '3',
-//     position: '3',
-//     subtitle: 'Title 3',
-//     content: 'Content 3',
-//   },
-// ];
+const x = require('./models/BookList');
+const y = require('./models/BookContent');
 
-const generate = (fileTitle, isBuffer=false, props = {
-  identifier: 'epub-doc',
-  title: 'New Document',
-  creator: '-',
-  language: 'en',
-  description: '-',
-  coverPath: null,
-  thumbnailPath: null,
-  publisher: '-',
-  updatedAt: moment(),
-}) => {
+const generate = (bookTitle, isBuffer=false) => {
+  const props = x.findOne({
+    where: {title: bookTitle},
+  }).catch(console.error);
+  if (!props) return 0;
+  const data = y.findAll({
+    where: {bookId: props.id},
+    raw: true,
+  }).catch(console.error);
+  if (data.length < 1) return 0;
+
   const zip = new AdmZip();
 
   // = CONFIGURATION =
-  const fileName = fileTitle ?? 'epub-doc';
+  const fileName = bookTitle ?? 'epub-doc';
   const fileExtension = 'epub';
   const output = 'output/' + fileName +'.'+ fileExtension;
   // - mimetype -
