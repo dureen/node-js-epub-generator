@@ -1,5 +1,5 @@
 {
-  "name": "examples",
+  "name": "node-js-epub-generator",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dureen/node-examples.git"
+    "url": "git+https://github.com/dureennode-js-epub-generator.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dureen/node-examples/issues"
+    "url": "https://github.com/dureen/node-js-epub-generator/issues"
   },
-  "homepage": "https://github.com/dureen/node-examples#readme",
+  "homepage": "https://github.com/dureen/node-js-epub-generator#readme",
   "dependencies": {
     "@napi-rs/canvas": "^0.1.39",
     "adm-zip": "^0.5.10",
