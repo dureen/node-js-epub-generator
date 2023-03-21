@@ -1,107 +1,97 @@
-const x = require('./models/BookList');
-const y = require('./models/BookContent');
+const BookListModel = require('./models/BookList');
+const BookContentModel = require('./models/BookContent');
 
-exports.addBook = async (props={
-  identifier: 'epub-doc',
-  title: 'New Document',
-  creator: '-',
+exports.createBook = async (props={
+  identifier: 'book-id',
+  title: 'book-name',
   language: 'en',
-  description: '-',
-  coverPath: null,
-  thumbnailPath: null,
-  publisher: '-',
+  contributor: null,
+  creator: null,
+  date: null,
+  subject: null,
+  description: null,
+  publisher: null,
+  cover: null,
+  status: null,
 }) => {
-  return await x.create(props).catch(console.error);
+  if (!props.identifier || !props.title || !props.language) return 0;
+  const res = await BookListModel.create(props).catch(console.error);
+  return {id: res.id};
 };
 
 exports.updateBook = async (bookId, props={
-  identifier: '',
-  title: '',
-  creator: '',
-  language: '',
-  description: '',
-  coverPath: '',
-  thumbnailPath: '',
-  publisher: '',
+  identifier: 'book-id',
+  title: 'book-name',
+  language: 'en',
+  contributor: null,
+  creator: null,
+  date: null,
+  subject: null,
+  description: null,
+  publisher: null,
+  cover: null,
+  status: null,
 }) => {
-  const book = await x.findByPk(bookId).catch(console.error);
+  const book = await BookListModel.findByPk(bookId).catch(console.error);
   if (!book) return 0;
-
-  if (props.identifier !== '' && props.identifier !== null) {
-    x.identifier = props.identifier;
-  }
-  if (props.title !== '' && props.title !== null) {
-    x.title = props.title;
-  }
-  if (props.creator !== '' && props.creator !== null) {
-    x.creator = props.creator;
-  }
-  if (props.language !== '' && props.language !== null) {
-    x.language = props.language;
-  }
-  if (props.description !== '' && props.description !== null) {
-    x.description = props.description;
-  }
-  if (props.coverPath !== '' && props.coverPath !== null) {
-    x.coverPath = props.coverPath;
-  }
-  if (props.thumbnailPath !== '' && props.thumbnailPath !== null) {
-    x.thumbnailPath = props.thumbnailPath;
-  }
-  if (props.publisher !== '' && props.publisher !== null) {
-    x.publisher = props.publisher;
-  }
-
-  x.save();
+  // Required
+  if (props.identifier) book.identifier = props.identifier;
+  if (props.title) book.title = props.title;
+  if (props.language) book.language = props.language;
+  // Optional
+  if (props.contributor) book.contributor = props.contributor;
+  if (props.creator) book.creator = props.creator;
+  if (props.date) book.date = props.date;
+  if (props.subject) book.subject = props.subject;
+  if (props.description) book.description = props.description;
+  if (props.publisher) book.publisher = props.publisher;
+  if (props.cover) book.cover = props.cover;
+  if (props.status) book.status = props.status;
+  book.save();
   return 1;
 };
 
 exports.destroyBook = async (bookId) => {
-  return await x.destroy({
+  return await BookListModel.destroy({
     where: {id: bookId},
   }).catch(console.error);
 };
 
 
-exports.addContent= async (book={
-  bookId: 0,
-  position: 0,
-  subtitle: '',
-  content: '',
+exports.createContent= async (props={
+  bookId: 'book-id',
+  rawPosition: null,
+  subTitle: 'subtitle',
+  content: null,
+  status: null,
 }) => {
-  if (!book.bookId) return 0;
-  if (!book.position) return 0;
-  if (!book.subtitle || book.subtitle == '') return 0;
-  if (!book.content || book.content == '') return 0;
-  return await y.create(book).catch(console.error);
+  if (!props.bookId || !props.subTitle) return 0;
+  return await BookContentModel.create(props).catch(console.error);
 };
 
-exports.updateContent = async (contentId, book={
-  bookId: 0,
-  position: 0,
-  subtitle: '',
-  content: '',
+exports.updateContent = async (contentId, props={
+  bookId: 'book-id',
+  rawPosition: null,
+  subTitle: 'subtitle',
+  content: null,
+  status: null,
 }) => {
-  const content = await y.findByPk(contentId).catch(console.error);
+  const content = await BookContentModel.findByPk(contentId)
+      .catch(console.error);
   if (!content) return 0;
-  if (book.bookId) {
-    y.bookId = book.bookId;
-  }
-  if (book.position) {
-    y.position = book.position;
-  }
-  if (book.subtitle && book.subtitle !== '') {
-    y.position = book.subtitle;
-  }
-  if (book.content && book.content !== '') {
-    y.content = book.content;
-  }
-  y.save();
+
+  if (props.bookId) content.bookId = props.bookId;
+  if (props.rawPosition) content.rawPosition = props.rawPosition;
+  if (props.subTitle) content.subTitle = props.subTitle;
+  if (props.content) content.content = props.content;
+  if (props.status) content.status = props.status;
+
+  content.save();
   return 1;
 };
 
 exports.destroyContent = async (contentId) => {
-  return await y.destroy({
+  return await BookContentModel.destroy({
     where: {id: contentId},
   }).catch(console.error);
 };

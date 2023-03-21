@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<package version="3.0" unique-identifier="BookId" xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata>
+    {{ metadata }}
+    <meta name="padding" content="ZPN/pJ1kMLC2wk6bKfq8HGPi+XphjdGhpJUptfhJQvM="/>
+    <meta name="cover" content="cover"/>
+  </metadata>
+  
+  <manifest>
+    {{ manifest }}
+  </manifest>
+
+  <!-- toc.ncx -->
+  <spine toc="ncx"> 
+    <itemref idref="pg-cover"/>
+    <itemref idref="pg-intro"/>
+    <itemref idref="pg-toc"/>
+    {{ spine }}
+  </spine>
+</package>

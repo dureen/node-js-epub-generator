@@ -3,18 +3,18 @@
   <head>
   <!-- The following four metadata items are required for all NCX documents,
 including those that conform to the relaxed constraints of OPS 2.0 -->
-    <meta name="dtb:uid" content="6a2d2347-157b-3e0d-897b-fadf40063834"/> <!-- same as in .opf -->
+    <meta name="dtb:uid" content="{{ identifier }}"/> <!-- same as in .opf -->
     <meta name="dtb:depth" content="2"/> <!-- 1 or higher -->
     <meta name="dtb:totalPageCount" content="0"/> <!-- must be 0 -->
     <meta name="dtb:maxPageNumber" content="0"/> <!-- must be 0 -->
   </head>
 
   <docTitle>
-    <text>God-Like Extraction</text>
+    <text>{{ title }}</text>
   </docTitle>
-  <!-- <docAuthor>
-    <text>Austen, Jane</text>
-  </docAuthor> -->
+  <docAuthor>
+    <text>{{ creator }}</text>
+  </docAuthor>
   <navMap>
     <navInfo>
       <text>THE CONTENTS</text>
@@ -39,6 +39,6 @@ including those that conform to the relaxed constraints of OPS 2.0 -->
       </navLabel>
       <content src="nav.xhtml"/>
     </navPoint>
-{{ navPoint }}
+    {{ navPoint }}
   </navMap>
 </ncx>

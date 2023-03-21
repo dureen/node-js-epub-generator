@@ -12,11 +12,10 @@ BookList.init({
     autoIncrement: true,
     primaryKey: true,
   },
-  identifier: {
-    type: DataTypes.STRING,
-    allowNull: true,
-  },
-  title: {
+  identifier: DataTypes.STRING,
+  title: DataTypes.STRING,
+  language: DataTypes.STRING,
+  contributor: {
     type: DataTypes.STRING,
     allowNull: true,
   },
@@ -24,33 +23,37 @@ BookList.init({
     type: DataTypes.STRING,
     allowNull: true,
   },
-  language: {
+  date: {
+    type: DataTypes.DATE,
+    allowNull: true,
+  },
+  subject: {
     type: DataTypes.STRING,
     allowNull: true,
   },
   description: {
-    type: DataTypes.STRING,
-    allowNull: true,
-  },
-  coverPath: {
-    type: DataTypes.STRING,
-    allowNull: true,
-  },
-  thumbnailPath: {
-    type: DataTypes.STRING,
+    type: DataTypes.TEXT,
     allowNull: true,
   },
   publisher: {
     type: DataTypes.STRING,
     allowNull: true,
   },
+  cover: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  status: {
+    type: DataTypes.SMALLINT,
+    allowNull: true,
+  },
 }, {
   sequelize,
   timestamps: true,
-  tableName: 'bookList',
+  tableName: 'books',
 });
 
-BookList.sync();
+// BookList.sync();
 // Stats.hasMany(StatsGuilds);
 
 module.exports = BookList;

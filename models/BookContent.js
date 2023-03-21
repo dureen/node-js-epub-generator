@@ -23,11 +23,11 @@ BookContent.init({
     onUpdate: 'CASCADE',
     onDelete: 'CASCADE',
   },
-  position: {
+  rawPosition: {
     type: DataTypes.INTEGER,
     allowNull: true,
   },
-  subtitle: {
+  subTitle: {
     type: DataTypes.STRING,
     allowNull: true,
   },
@@ -42,8 +42,8 @@ BookContent.init({
 }, {
   sequelize,
   timestamps: true,
-  tableName: 'bookContent',
+  tableName: 'contents',
 });
 
-BookContent.sync();
+// BookContent.sync();
 module.exports = BookContent;
