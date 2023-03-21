@@ -6,7 +6,7 @@ const AdmZip = require('adm-zip');
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
 
-const packagePath = 'package';
+const packagePath = 'epub-packages';
 const outputPath = 'output';
 const fileExtension = '.epub';
 
