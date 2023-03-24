@@ -6,7 +6,7 @@ const AdmZip = require('adm-zip');
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
 
-const packagePath = 'epub-packages';
+const packagePath = 'epub-pkg';
 const outputPath = 'output';
 const fileExtension = '.epub';
 
@@ -233,8 +233,8 @@ const generate = (bookTitle, isBuffer=false) => {
     return willSendthis;
   } else {
     // or write everything to disk
-    const output = path.join(outputPath, fileName + fileExtension);
-    zip.writeZip(output);
+    const fileOutput = path.join(outputPath, fileName + fileExtension);
+    zip.writeZip(fileOutput);
     return 1;
   }
 };
